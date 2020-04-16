@@ -97,12 +97,14 @@ ggplot(aggregateIES[aggregateIES$feature=="gene",], aes(x = Total)) + geom_densi
 dev.off()
 
 # smoothed plots
-  ggplot(methodDif[methodDif$feature=="gene",], aes(x = min_1.5vsTotal)) + geom_density(color="black", fill="green", alpha = 0.3) +
+pdf("imgs/deltaIESdistribution_Barass.pdf.pdf")
+ggplot(methodDif[methodDif$feature=="gene",], aes(x = min_1.5vsTotal)) + geom_density(color="black", fill="green", alpha = 0.3) +
     geom_density(data = methodDif[methodDif$feature=="gene",], aes(x = min_2.5vsTotal) ,color="black", fill="yellow", alpha = 0.3) +
     geom_density(data = methodDif[methodDif$feature=="gene",], aes(x = min_5vsTotal) ,color="black", fill="orange", alpha = 0.3) +
     labs(y="Density of Observations", x = "Log2fc Difference in Intron Enrichment Score") +
     theme_grey(base_size = 15) +
     geom_vline(xintercept=0) + xlim(-2, 6)
+dev.off()
 
 # Comparing WH3 Total & Nascent Data to Barass
 ggplot(aggregateIES[aggregateIES$feature=="gene",], aes(x = WH3_Total)) + geom_histogram(binwidth=.02,color="black", fill="purple", alpha = 0.1) +
