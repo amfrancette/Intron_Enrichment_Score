@@ -115,7 +115,7 @@ ggplot(aggregateIES[aggregateIES$feature=="gene",], aes(x = WH3_Total)) + geom_h
   geom_vline(xintercept=1) + xlim(0, 1.5)
 
 # smoothed plots
-pdf("IESdistribution_ALL.pdf")
+pdf("imgs/IESdistribution_ALL.pdf")
 ggplot(aggregateIES[aggregateIES$feature=="gene",], aes(x = Total)) + geom_density(color="black", fill="red", alpha = 0.3) +
   geom_density(data = aggregateIES[aggregateIES$feature=="gene",], aes(x = min_5), color="black", fill="orange", alpha = 0.3) +
   geom_density(data = aggregateIES[aggregateIES$feature=="gene",], aes(x = min_2.5), color="black", fill="yellow", alpha = .3) +

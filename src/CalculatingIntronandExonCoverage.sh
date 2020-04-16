@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+bigwigfolder=Barass_bigwig_good
 
 # using multiBigwigSummary in deeptools to calculate read depth over exons and introns
 # sources of example bigwig data is Barass et al. 2015 doi: 10.1186/s13059-015-0848-1 
@@ -8,7 +9,7 @@ cd ..
 
 # get average read depth for all introns and exons of genes with introns
 multiBigwigSummary BED-file \
- --bwfiles Barass_bigwig_good/*.bw \
+ --bwfiles "$bigwigfolder"/*.bw \
  --BED exons_formatted.bed \
  --smartLabels \
  -out res/bw_exon_scores.npz --outRawCounts res/bw_exon_scores.tab
@@ -16,7 +17,7 @@ multiBigwigSummary BED-file \
 sed 1d res/bw_exon_scores.tab > bw_exon_scores_decap.tab
 
 multiBigwigSummary BED-file \
- --bwfiles Barass_bigwig_good/*.bw \
+ --bwfiles "$bigwigfolder"/*.bw \
  --BED introns_formatted.bed \
  --smartLabels \
  -out res/bw_intron_scores.npz --outRawCounts res/bw_intron_scores.tab
