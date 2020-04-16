@@ -97,7 +97,7 @@ ggplot(aggregateIES[aggregateIES$feature=="gene",], aes(x = Total)) + geom_densi
 dev.off()
 
 # smoothed plots
-pdf("imgs/deltaIESdistribution_Barass.pdf.pdf")
+pdf("imgs/deltaIESdistribution_Barass.pdf")
 ggplot(methodDif[methodDif$feature=="gene",], aes(x = min_1.5vsTotal)) + geom_density(color="black", fill="green", alpha = 0.3) +
     geom_density(data = methodDif[methodDif$feature=="gene",], aes(x = min_2.5vsTotal) ,color="black", fill="yellow", alpha = 0.3) +
     geom_density(data = methodDif[methodDif$feature=="gene",], aes(x = min_5vsTotal) ,color="black", fill="orange", alpha = 0.3) +
@@ -115,6 +115,7 @@ ggplot(aggregateIES[aggregateIES$feature=="gene",], aes(x = WH3_Total)) + geom_h
   geom_vline(xintercept=1) + xlim(0, 1.5)
 
 # smoothed plots
+pdf("IESdistribution_ALL.pdf")
 ggplot(aggregateIES[aggregateIES$feature=="gene",], aes(x = Total)) + geom_density(color="black", fill="red", alpha = 0.3) +
   geom_density(data = aggregateIES[aggregateIES$feature=="gene",], aes(x = min_5), color="black", fill="orange", alpha = 0.3) +
   geom_density(data = aggregateIES[aggregateIES$feature=="gene",], aes(x = min_2.5), color="black", fill="yellow", alpha = .3) +
@@ -124,6 +125,7 @@ ggplot(aggregateIES[aggregateIES$feature=="gene",], aes(x = Total)) + geom_densi
   labs(y="Density of Observations", x = "Intron Enrichment Score") +
   theme_grey(base_size = 30) +
   geom_vline(xintercept=1) + xlim(0, 1.5)
+dev.off()
 
 colnames(IES)
 # Comparison Between REPS
