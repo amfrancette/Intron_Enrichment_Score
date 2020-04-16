@@ -14,14 +14,17 @@ Finally, IES is calculated as the ratio of average intronic coverage to average 
 
 
 ## Implementation 
-Execute scripts from the src folder. 
-
 1. Place all bigwigs for analysis in a single folder.
+
 2. Open the file "src/CalculatingIntronandExonCoverage.sh" and change the variable "bigwigfolder" to the name of the folder holding bigwigs for analysis.
 ![bigwigfolder Variable](READMEimgs/CalculatingExonicCoverage.png)
+
 3. Execute the script "CalculatingIntronandExonCoverage.sh" form the src folder.
+```./CalculatingIntronandExonCoverage.sh```
+
 4. Open the R script and edit the sample names to fit the samples you have. Import the tab files and use the line below to confirm sample order is as expected. Change the "column_names" variable to reflect the sample order. 
 ![Changing Exon/Intron Score Column Names](READMEimgs/ChangeExonScoreSampleNames.png)
+
 5. Execute the script up until IES is generated and display data as you please. 
 
 
