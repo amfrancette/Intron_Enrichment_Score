@@ -28,6 +28,9 @@ Finally, IES is calculated as the ratio of average intronic coverage to average 
 
 5. Execute the script up until IES is generated and display data as you please. 
 
+Example IES Analysis:
+![Example IES Analysis](READMEimgs/Barass_IESdist.png)
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

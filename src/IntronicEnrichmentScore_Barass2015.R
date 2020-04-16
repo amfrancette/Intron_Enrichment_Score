@@ -52,14 +52,12 @@ colnames(IES)[1] <- "locus"
 IES[is.na(IES)] <- 0
 
 # this line displays the average IES per colum
-  apply(IES[3:(2 + number_of_samples)], 2, mean, na.rm = T)
+apply(IES[3:(2 + number_of_samples)], 2, mean, na.rm = T)
 # only counting genes in average
-  apply(IES[IES$feature == "gene", 3:(2 + number_of_samples)], 2, mean, na.rm = T)
+apply(IES[IES$feature == "gene", 3:(2 + number_of_samples)], 2, mean, na.rm = T)
 
 # this line displays the median IES per colum
-  apply(IES[3:(2 + number_of_samples)], 2, median, na.rm = T)
-  
-  
+apply(IES[3:(2 + number_of_samples)], 2, median, na.rm = T)
 # counting only genes in median
 apply(IES[IES$feature == "gene", 3:(2 + number_of_samples)], 2, median, na.rm = T)
   
