@@ -10,14 +10,23 @@ Then, after import to R, coverage over multiple exons are averaged to get a sing
 ![Calculation of Exonic Coverage](READMEimgs/CalculatingExonicCoverage.png)
 
 Finally, IES is calculated as the ratio of average intronic coverage to average exonic coverage 
-![Calculation of Exonic Coverage](READMEimgs/CalculatingIES.png)
+![Calculation of IES](READMEimgs/CalculatingIES.png)
 
+IES < 1 indicates lower average intronic coverage than average exonic coverage 
+![IES Less Than 1 Example](READMEimgs/IES_lessthan1.png)
+
+
+IES ≈ 1 indicates roughly equal average intronic and  exonic coverage 
+![IES Approximately 1 Example](READMEimgs/IES_1.png)
+
+
+IES > 1 indicates greater average intronic coverage than average exonic coverage 
+![IES Greater Than 1 Example](READMEimgs/IES_greaterthan1.png)
 
 ## Implementation 
 1. Place all bigwigs for analysis in a single folder.
 
 2. Open the file "src/CalculatingIntronandExonCoverage.sh" and change the variable "bigwigfolder" to the name of the folder holding bigwigs for analysis.
-![bigwigfolder Variable](READMEimgs/CalculatingExonicCoverage.png)
 
 3. Execute the script "CalculatingIntronandExonCoverage.sh" form the src folder.
 
