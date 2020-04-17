@@ -6,7 +6,7 @@ Input for the analysis is a folder of bigwig files.
 
 These scripts first calculate the average coverage over exon and intron regions using the multiBigwigSummary command from deeptools. 
 
-Then, after import to R, coverage over multiple exons are averaged to get a single exonic read depth (reapeted for introns).
+Then, after import to R, coverage over multiple exons are averaged to get a single exonic read depth (repeated for introns).
 ![Calculation of Exonic Coverage](READMEimgs/CalculatingExonicCoverage.png)
 
 Finally, IES is calculated as the ratio of average intronic coverage to average exonic coverage 
